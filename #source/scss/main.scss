@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Jura:wght@700&family=Syne+Mono&display=swap');
+a {
+	color: inherit;
+	transition: all 1s ease;
+  }
+ 
+  a:hover,
+  a:active,
+  a:focus {
+	color: rgb(62, 13, 197);;
+	outline: none !important;
+	
+  }
+
+#header, #hello, #skills, #experience, #education, #contact {
+	border-bottom: 1px solid #e3e3e3 ;
+}
+
+body {
+	font-family: 'Jura', sans-serif;
+}
+
+
+/* Header */
+.header {
+	width: 100%;
+	padding: 1.25rem 0;
+	background-color: #fff;
+	box-shadow: 0 5px 10px rgba(#252525, 0.1);
+	border-bottom-color: transparent;
+	font-family: 'Jura', sans-serif; 
+	
+}
+
+.logo {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+
+.main-menu  {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	list-style-type: none;
+	 li a {
+		 padding: 12px 20px;
+		 margin-bottom: 0px;
+		 text-decoration: none;
+	 }
+}
+
+.nav-ul {
+	list-style-type: none;
+	padding: 12px 20px 0px;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	 li:nth-child(-n+4) {
+		padding-bottom: 20px;
+	 }
+	 a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	 }
+	
+}
+
+
+
+.point {
+	font-size: 18px;
+	&:after {
+	  content: '.';
+	  color:rgb(62, 13, 197);
+	}
+  }
+
+.toggle-btn {
+    width: 35px;
+    right: 80px;
+    display: none;
+	cursor: pointer;
+     span {
+         
+         width: 100%;
+         height: 2px;
+         background-color: #000;
+         float: right;
+         margin-bottom: 8px;
+     }
+}
+
+
+
+#hello, #skills, #experience, #education, #contact, #footer{
+	
+	padding: 2.5rem 0 2.5rem 0;
+}
+
+#hello {
+	overflow:hidden;
+	.opacity-box {
+		opacity: 0.8;
+		p {
+			margin-bottom: 0.2rem;
+		}
+	}
+}
+
+.opacity-box {
+	opacity: 0.8;
+}
+
+.about-text {
+	margin-bottom: 1.5rem;
+}
+
+.about-info {
+	word-wrap: break-word;
+	.span-title  {
+		
+		font-size: 18px;
+		font-weight: 700;
+		float: left;
+	}
+	.span-text, .span-icons {
+		display: block;
+		opacity: 0.8;
+		padding-left: 12rem;
+			a:hover{
+				text-decoration: none;
+			}
+			a:nth-child(n+2) {
+				
+				padding-left: 2rem;
+			}
+		
+	}
+	
+}
+
+.button-group {
+	text-align: left;
+	margin-top: 1.5rem;
+	a {
+		width: 130px;
+		margin-right: 3rem;
+		transition: all 1s ease;
+	}
+	a:hover {
+		color: rgb(14, 1, 1);
+		background-color: #fff;
+		border: 0.1px solid rgb(17, 0, 253);
+		box-shadow: 0 5px 55px rgba(#00a2ff, 0.1);
+	}
+}
+
+.btn-blue {
+	color: #fff;
+	background-color: rgb(62, 13, 197);
+	
+}
+
+
+
+.form-email{
+margin-top: 1.5rem;
+}
+
+
+@media (max-width: 991px) {
+	.main-menu {
+		display: none;
+	}
+	
+	.toggle-btn {
+		display: block;
+	}
+
+}
+
+@media (min-width: 992px) {
+
+	.toggle-btn {
+		display: none;
+	  }
+	  .modal {
+		  display: none;
+	  }
+	  .modal-content {
+		display: none;
+	  }
+
+}
