@@ -57,7 +57,10 @@
       box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
       text-decoration: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     .button-red:hover {
@@ -71,6 +74,9 @@
       text-align: center;
       background-color: #eaf1f9;
       flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
     }
 
     .main-section h1 {
@@ -89,11 +95,12 @@
     /* Card Section Styles */
     .card-section {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
       padding: clamp(20px, 5vw, 40px) 5%;
       max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -102,10 +109,10 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 20px;
-      width: 300px;
+      width: 100%;
+      max-width: 400px;
       text-align: left;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      flex: 0 0 auto;
     }
 
     .card:hover {
@@ -148,46 +155,13 @@
     }
 
     /* Media Queries */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 5%;
-      }
-
-      .button-red {
-        width: 100%;
-        max-width: 250px;
-        white-space: normal;
-        padding: 12px;
-      }
-
-      .card-section {
-        flex-direction: column;
-        align-items: center;
+    @media (min-width: 768px) {
+      .card {
+        max-width: 600px;
       }
       
-      .card {
-        width: 100%;
-        max-width: 400px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .main-section {
-        padding: 40px 5%;
-      }
-
-      .main-section h1 {
-        font-size: 22px;
-      }
-
-      .main-section p {
-        font-size: 16px;
-      }
-
-      .card {
-        width: 100%;
+      .button-red {
+        padding: 12px 24px;
       }
     }
   </style>
