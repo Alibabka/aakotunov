@@ -32,9 +32,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px 20px; /* Увеличен отступ сверху */
+      padding: 25px 20px;
       background: white;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 40px; /* Отступ от хедера до основного контента */
     }
 
     header h1 {
@@ -62,8 +63,10 @@
     }
 
     main {
-      padding: 40px 0; /* Увеличен отступ сверху */
+      padding: 0 0 60px; /* Убрали верхний padding, оставили только нижний */
       flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .intro {
@@ -110,7 +113,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin: 25px auto 40px; /* Увеличен нижний отступ */
+      margin: 25px auto;
+      flex-grow: 1; /* Позволяет карточкам занимать доступное пространство */
     }
 
     .card {
@@ -158,23 +162,26 @@
       z-index: 0;
     }
 
-    .text-animation-container {
+    .allo-container {
+      margin-top: auto; /* Фиксирует ALLO внизу main */
+      margin-bottom: 80px; /* Фиксированный отступ от футера */
       text-align: center;
-      margin: 0 auto 50px; /* Увеличен нижний отступ */
       width: 100%;
       max-width: 800px;
       padding: 0 20px;
+      align-self: center;
     }
 
     .text-animation {
-      font-size: 4rem; /* Увеличен размер */
+      font-size: 4rem;
       font-weight: bold;
       color: #F12A1D;
       animation: float 3s ease-in-out infinite;
-      display: block; /* Растягиваем на всю ширину */
+      display: block;
       width: 100%;
       text-align: center;
-      letter-spacing: 10px; /* Разреженные буквы */
+      letter-spacing: 10px;
+      margin: 0 auto;
     }
 
     .text-animation span {
@@ -198,7 +205,6 @@
       font-size: 0.85rem;
       padding: 15px;
       background: #fff;
-      margin-top: auto;
       color: #666;
     }
 
@@ -212,11 +218,11 @@
       }
       
       .contact::after {
-        display: block; /* Показываем узор только на ПК */
+        display: block;
       }
       
       .text-animation {
-        font-size: 5rem; /* Ещё больше на ПК */
+        font-size: 5rem;
         letter-spacing: 15px;
       }
     }
@@ -232,7 +238,11 @@
       }
       
       .contact::after {
-        display: none; /* Скрываем узор на мобильных */
+        display: none;
+      }
+      
+      .allo-container {
+        margin-bottom: 60px; /* Меньший отступ на мобильных */
       }
     }
   </style>
@@ -264,15 +274,13 @@
       </div>
       <div class="card contact">
         <h3>Контакти</h3>
-        <p>
         <a href="tel:+380665850807">+380665850807</a>
         <a href="mailto:aakotunov@gmail.com">aakotunov@gmail.com</a>
         <a href="https://t.me/andr_k99" target="_blank">@andr_k99</a>
-        </p>
       </div>
     </div>
 
-    <div class="text-animation-container">
+    <div class="allo-container">
       <div class="text-animation">
         <span>А</span>
         <span>Л</span>
