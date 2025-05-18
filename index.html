@@ -173,61 +173,45 @@
         <a href="https://t.me/andr_k99" target="_blank">@andr_k99</a>
       </div>
     </div>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .text-animation {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #F12A1D;
+            animation: float 3s ease-in-out infinite;
+        }
+        .text-animation span {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        .text-animation span:nth-child(1) { animation-delay: 0.1s; }
+        .text-animation span:nth-child(2) { animation-delay: 0.2s; }
+        .text-animation span:nth-child(3) { animation-delay: 0.3s; }
+        .text-animation span:nth-child(4) { animation-delay: 0.4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-animation">
+        <span>A</span>
+        <span>L</span>
+        <span>L</span>
+        <span>O</span>
+    </div>
+</body>
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1376 768 "width="1376" height="768">
-  <style>
-    path {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: draw 5s ease-in-out forwards;
-      stroke: #400000;
-      stroke-width: 2;
-      fill-opacity: 0;
-    }
-    
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-        fill-opacity: 1;
-      }
-    }
-    
-    .delay1 { animation-delay: 0.5s; }
-    .delay2 { animation-delay: 1s; }
-    .delay3 { animation-delay: 1.5s; }
-    .delay4 { animation-delay: 2s; }
-    .delay5 { animation-delay: 2.5s; }
-    .delay6 { animation-delay: 3s; }
-    .delay7 { animation-delay: 3.5s; }
-    .delay8 { animation-delay: 4s; }
-    
-    .pulse {
-      animation: pulse 2s infinite alternate;
-    }
-    
-    @keyframes pulse {
-      from { fill-opacity: 0.3; }
-      to { fill-opacity: 0.8; }
-    }
-  </style>
-  
-  <g stroke-width="0">
-    <!-- Основные пути с анимацией рисования -->
-    <path d="M0 0 C454.08 0 908.16 0 1376 0 C1376 253.44 1376 506.88 1376 768 C921.92 768 467.84 768 0 768 C0 514.56 0 261.12 0 0 Z " fill="#FD191E" transform="translate(0,0)">
-  <animate attributeName="d" dur="10s" repeatCount="indefinite" values="..."/>
-</path>
-<!-- Центральный элемент с пульсацией -->
-    <path d="M0 0 C7.25624911 4.61249943 12.29963244 11.89889732 15 20 C16.6295101 21.57485787 16.6295101 21.57485787 18.625 23.125 C27.39726752 30.68892298 33.31494423 39.36630688 35 51 C36.77220633 76.31930851 36.77220633 76.31930851 33 87 C32.73646098 88.39334055 32.48448301 89.78897635 32.25 91.1875 C30.57506879 98.79501197 26.38593533 105.43918237 22.7109375 112.23046875 " fill="#FBEBEA" transform="translate(1338,452)">
-  <animate attributeName="d" dur="7s" repeatCount="indefinite" values="..."/>
-</path>
-
-    <!-- Дополнительные элементы с разными задержками -->
-    <path d="C22.31463135 112.9678125 21.9183252 113.70515625 21.51000977 114.46484375 C20.73405798 115.90506088 19.9511097 117.34153913 19.15991211 118.7734375 C11.84895898 132.29137857 11.31941974 144.62422621 15.6640625 159.4453125 C17.70084244 164.86481468 20.54560383 169.38102379 24 174 C24.41121094 174.58136719 24.82242187 175.16273438 25.24609375 175.76171875 C26.98945167 178.06005567 28.73696519 179.83712705 31.18917751 181.35555363 C34.83812664 183.66588575 37.52922176 185.4521068 38.81991768 189.69584465 C39.10825958 193.04033527 39.11356656 196.28054778 39.02172852 199.63647461 " fill="#FBEBEA" transform="translate(1338,452)">
-  <animate attributeName="d" dur="8s" repeatCount="indefinite" values="..."/>
-</path>
-
-    </g>
-</svg>
   </main>
 
   <footer>
