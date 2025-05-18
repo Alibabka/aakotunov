@@ -145,7 +145,47 @@
       </p>
     </div>
   </section>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .text-animation {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #F12A1D;
+            animation: float 3s ease-in-out infinite;
+        }
+        .text-animation span {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        .text-animation span:nth-child(1) { animation-delay: 0.1s; }
+        .text-animation span:nth-child(2) { animation-delay: 0.2s; }
+        .text-animation span:nth-child(3) { animation-delay: 0.3s; }
+        .text-animation span:nth-child(4) { animation-delay: 0.4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-animation">
+        <span>A</span>
+        <span>L</span>
+        <span>L</span>
+        <span>O</span>
+    </div>
+</body>
+</html>
   <footer>
     &copy; 2025 Андрій Котунов — Резюме-картка контент-менеджера.
   </footer>
