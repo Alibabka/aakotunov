@@ -18,6 +18,14 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     header {
@@ -33,6 +41,7 @@
     header h1 {
       font-size: 1.2rem;
       color: #111;
+      font-weight: 600;
     }
 
     .contact-btn {
@@ -45,27 +54,40 @@
       cursor: pointer;
       text-decoration: none;
       box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(255, 0, 0, 0.4);
     }
 
     main {
-      padding: 40px 20px;
+      padding: 40px 0;
       flex: 1;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .intro h2 {
       font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-weight: 800;
+      line-height: 1.2;
     }
 
     .intro p {
       font-size: 1.1rem;
-      margin: 10px 0;
-      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 0 20px;
     }
 
     .cta {
-      margin: 20px 0;
+      margin: 30px 0;
       text-align: center;
     }
 
@@ -78,38 +100,86 @@
       border-radius: 40px;
       text-decoration: none;
       box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
     }
 
     .cards {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin-top: 30px;
+      margin: 30px auto;
+      max-width: 1200px;
+      padding: 0 20px;
     }
 
     .card {
       background: white;
       border-radius: 12px;
-      padding: 20px;
+      padding: 25px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
     .card h3 {
-      color: red;
+      color: #ff1500;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
       margin-bottom: 10px;
     }
 
     .contact a {
       display: block;
-      color: red;
+      color: #ff1500;
       text-decoration: none;
-      margin-top: 5px;
+      margin-top: 10px;
       word-break: break-word;
+      transition: color 0.3s;
     }
 
-    .svg-graph {
-      display: none;
-      margin-top: 60px;
+    .contact a:hover {
+      color: #ff3c00;
+      text-decoration: underline;
+    }
+
+    .text-animation-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .text-animation {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #F12A1D;
+      animation: float 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    .text-animation span {
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .text-animation span:nth-child(1) { animation-delay: 0.1s; }
+    .text-animation span:nth-child(2) { animation-delay: 0.2s; }
+    .text-animation span:nth-child(3) { animation-delay: 0.3s; }
+    .text-animation span:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
     }
 
     footer {
@@ -118,36 +188,53 @@
       padding: 20px;
       background: #fff;
       margin-top: auto;
+      color: #666;
     }
 
     @media (min-width: 768px) {
       .cards {
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .card {
-        width: 30%;
+        width: calc(33.333% - 20px);
+        min-width: 300px;
       }
 
-      .svg-graph {
-        display: block;
+      .intro h2 {
+        font-size: 2.5rem;
       }
 
-      .intro {
-        text-align: center;
+      .text-animation {
+        font-size: 5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro h2 {
+        font-size: 1.8rem;
+      }
+      
+      .text-animation {
+        font-size: 2.5rem;
+      }
+      
+      .cta a {
+        padding: 12px 25px;
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
+  <header class="container">
     <h1>Андрій Котунов</h1>
     <a href="mailto:aakotunov@gmail.com" class="contact-btn">Зв'язатись</a>
   </header>
 
-  <main>
+  <main class="container">
     <section class="intro">
       <h2>Я — Контент-менеджер, який не боїться рутини</h2>
       <p>Системний, відповідальний, швидкий. Якщо потрібно знайти, об'єднати та впорядкувати дані — я тут.<br>Excel, HTML, CSS? Все знаю. Все зроблю. Навіть краще.</p>
@@ -174,49 +261,18 @@
       </div>
     </div>
 
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        .text-animation {
-            font-size: 5rem;
-            font-weight: bold;
-            color: #F12A1D;
-            animation: float 3s ease-in-out infinite;
-        }
-        .text-animation span {
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-        .text-animation span:nth-child(1) { animation-delay: 0.1s; }
-        .text-animation span:nth-child(2) { animation-delay: 0.2s; }
-        .text-animation span:nth-child(3) { animation-delay: 0.3s; }
-        .text-animation span:nth-child(4) { animation-delay: 0.4s; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-    </style>
-
-<body>
-    <div class="text-animation">
+    <div class="text-animation-container">
+      <div class="text-animation">
         <span>A</span>
         <span>L</span>
         <span>L</span>
         <span>O</span>
+      </div>
     </div>
-</body>
-
   </main>
 
   <footer>
     © 2025 Андрій Котунов — контент-менеджер.
   </footer>
-
 </body>
 </html>
